@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'tailwind'
 ]
 
@@ -135,5 +135,5 @@ TAILWIND_APP_NAME = "theme"
 
 STATIC_ROOT= os.path.join(BASE_DIR,'statifiles')
 
-STATICFILES_STORAGE='whitenoise.storage.Compressed-ManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
